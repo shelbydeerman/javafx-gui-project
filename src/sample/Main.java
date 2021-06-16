@@ -31,6 +31,7 @@ public class Main extends Application {
             }
         });
 
+        // alignment directions for Launch Pad
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
