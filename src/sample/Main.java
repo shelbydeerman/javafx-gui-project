@@ -15,13 +15,18 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
+        setup();
+    }
+
+    private void setup() {
+
         Label lbl = new Label("Select the exercise to launch");
         lbl.setFont(new Font("Times New Roman", 12));
         ComboBox<String> projects = new ComboBox<>();
         projects.getItems().add("Launch Pad");
         projects.getItems().add("Matrix Manager");
         Button launch = new Button("Launch");
-
         launch.setOnAction(event -> {
             if (projects.getValue() == null) {
                 System.out.println("Please select a value before you submit");
@@ -31,7 +36,6 @@ public class Main extends Application {
             }
         });
 
-        // alignment directions for Launch Pad
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
@@ -42,11 +46,13 @@ public class Main extends Application {
         root.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.setWidth(400);
-        primaryStage.setHeight(200);
-        primaryStage.show();
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setWidth(400);
+        stage.setHeight(200);
+        stage.show();
     }
+
 
 
     public static void main(String[] args) {
@@ -57,8 +63,7 @@ public class Main extends Application {
 
         switch (exerciseToLaunch) {
             case "Launch Pad":
-                // code for launchLaunchPad() here
-                System.out.println("Launch Pad!!"); // fixme
+                setup();
                 break;
 
             case "Matrix Manager":
