@@ -15,9 +15,6 @@ import javafx.stage.Stage;
  */
 public class View {
 
-    // Creating a new instance of the class "Controller"
-    Controller controller = new Controller();
-
     /**
      * Called to create a new instance of "Launch Pad"
      * Elements include a label, a ComboBox, and a "Launch" button
@@ -47,6 +44,8 @@ public class View {
         stage.setHeight(200);
         stage.show();
 
+        // Creating a new instance of the class "Controller"
+        Controller controller = new Controller();
 
         // Calls userWantsToLaunchExercise for the selected exercise upon
         // mouse click of the button "Launch"

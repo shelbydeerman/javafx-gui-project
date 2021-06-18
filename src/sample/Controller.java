@@ -1,7 +1,5 @@
 package sample;
 
-import javax.swing.text.View;
-
 /**
  * Defines the methods of what to do upon mouse click
  */
@@ -21,12 +19,12 @@ public class Controller {
         switch (exerciseToLaunch) {
 
             case "Launch Pad":
-                // When the exercise is "Launch Pad", a window identical to the first window opens
+                // If the exercise is "Launch Pad", a window identical to the first window opens
                 view.setup();
                 break;
 
             case "Matrix Manager":
-                // When the exercise if "Matrix Manager, a different window opens
+                // If the exercise is "Matrix Manager", a different window opens
                 model.errorGUI(exerciseToLaunch);
                 break;
 
