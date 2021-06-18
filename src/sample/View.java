@@ -10,16 +10,19 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+/**
+ * Defines how to create a new instance of the Launch Pad GUI
+ */
 public class View {
+
+    // Creating a new instance of the class "Controller"
+    Controller controller = new Controller();
+
     /**
-     * Defines how to create a new instance of the Launch Pad GUI
+     * Called to create a new instance of "Launch Pad"
+     * Elements include a label, a ComboBox, and a "Launch" button
      */
     public void setup() {
-
-        /**
-         * Called to create a new instance of "Launch Pad"
-         * Elements include a label, a ComboBox, and a "Launch" button
-         */
 
         Label lbl = new Label("Select the exercise to launch");
         lbl.setFont(new Font("Times New Roman", 12));
@@ -44,12 +47,9 @@ public class View {
         stage.setHeight(200);
         stage.show();
 
-        Controller controller = new Controller();
 
-        /**
-         * Calls userWantsToLaunchExercise for the selected exercise upon
-         * mouse click of the button "Launch"
-         */
+        // Calls userWantsToLaunchExercise for the selected exercise upon
+        // mouse click of the button "Launch"
         launch.setOnAction(event -> {
             if (projects.getValue() == null) {
                 System.out.println("Please select a value before you submit");

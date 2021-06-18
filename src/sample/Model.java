@@ -6,18 +6,19 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+/**
+ * Defines the GUI that is launched when "Matrix Manager" is selected
+ */
 public class Model {
-    /**
-     * Defines the GUI that is launched when "Matrix Manager" is selected
-     */
 
+    /**
+     * Called to create a new instance of "Matrix Manager"
+     * In the future, can be used for any exercise that is not yet implemented
+     * Elements include a label
+     *
+     * @param exercise is the exercise that was picked from the ComboBox
+     */
     public void errorGUI(String exercise) {
-        /**
-         * Called to create a new instance of "Matrix Manager"
-         * Elements include a label
-         *
-         * @param exercise is the exercise that was picked from the ComboBox
-         */
 
         Label matrixLbl = new Label(exercise + " is not yet implemented");
         HBox root = new HBox();

@@ -8,13 +8,12 @@ import javafx.stage.Stage;
  */
 public class Main extends Application {
 
-    /**
-     * Creating a new instance of the class 'View'
-     */
+    // Creating a new instance of the class "View"
     View view = new View();
 
     @Override
     public void start(Stage primaryStage) {
+        // creating first "Launch Pad" window
         view.setup();
     }
 
