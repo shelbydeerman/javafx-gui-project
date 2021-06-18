@@ -12,8 +12,9 @@ import javafx.stage.Stage;
 public class Model {
 
     /**
-     * Called to create a new instance of "Matrix Manager"
-     * In the future, can be used for any exercise that is not yet implemented
+     * Called to create a new instance of "Matrix Manager".
+     * In the future, can be used for any exercises in the ComboBox
+     * that are not yet implemented.
      * Elements include a label
      *
      * @param exercise is the exercise that was picked from the ComboBox
